@@ -85,13 +85,16 @@ BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
+TARGET_USERIMAGES_USE_EROFS := true
+AB_OTA_UPDATER := false
+BOARD_HAS_NO_SELECT_BUTTON := true
 
 # System as root
-BOARD_ROOT_EXTRA_FOLDERS := carrier data_mirror debug_ramdisk efs linkerconfig metadata oem optics postinstall prism second_stage_resources spu system_ext
+BOARD_ROOT_EXTRA_FOLDERS := carrier data_mirror debug_ramdisk efs linkerconfig metadata oem optics postinstall prism second_stage_resources spu system_ext odm_dlkm vendor_dlkm system_dlkm
 BOARD_SUPPRESS_SECURE_ERASE := true
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2021-08-01
+VENDOR_SECURITY_PATCH := 2024-11-01
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
@@ -112,13 +115,13 @@ TW_INCLUDE_FBE_METADATA_DECRYPT := false
 BOARD_USES_METADATA_PARTITION := true
 
 # TWRP Configuration
-TW_DEVICE_VERSION := Galaxy A34 5G
+TW_DEVICE_VERSION := A34_5G
 TWRP_EVENT_LOGGING := true
 TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP := true
 TW_SCREEN_BLANK_ON_BOOT := true
-TW_FRAMERATE := 90
+TW_FRAMERATE := 120
 TW_NO_SCREEN_BLANK := true
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
